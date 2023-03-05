@@ -89,17 +89,17 @@ public class BeforeAndAfterNode {
     Node a = new Node(1, new Node(2, new Node(3, new Node(4))));
 
     //After
-    Node b = a.next.next.next; //setting first node as last node of a
-    a.next.next.next = null; //
-    b.next = a.next.next;
+    Node b = a.next.next.next; //setting first node of b as last node of a
+    a.next.next.next = null; //making the "last" node of a null
+    b.next = a.next.next;//continue same process as above until b has all the nodes in reverse, and a doesn't have any nodes
     a.next.next = null;
     b.next.next = a.next;
     a.next = null;
 
     b.next.next.next = a;
 
-    a = b;
-    b = null;
+    a = b;//pointing a to b
+    b = null;//make b null
 
 
   }
