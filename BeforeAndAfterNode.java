@@ -5,7 +5,7 @@ public class BeforeAndAfterNode {
     Question1();
     Question2();
     Question3();
-    Question4();
+    Question4();//infinite
     Question5();
     Question6();
     Question7();
