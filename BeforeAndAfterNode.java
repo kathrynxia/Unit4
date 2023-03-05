@@ -1,6 +1,14 @@
 public class BeforeAndAfterNode {
 
   public static void main(String[] args) {
+    
+    Question1();
+    Question2();
+    Question3();
+    Question4();
+    Question5();
+    Question6();
+    Question7();
 
   }
 
