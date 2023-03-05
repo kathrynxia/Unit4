@@ -44,6 +44,13 @@ public class BeforeAndAfterNode {
     //After
     b = null;
     a.next.next.next = a;
+    
+    /*
+    
+   or b.next = a;
+    b = null; would be easier, but I don't like dealing with a lot of variables
+    
+    */
   }
 
   public static void Question5() { //*** */
