@@ -53,7 +53,7 @@ public class BeforeAndAfterNode {
     */
   }
 
-  public static void Question5() { //*** */
+  public static void Question5() {
 
     //Before
     Node a = new Node(1, new Node(2, new Node(3)));
