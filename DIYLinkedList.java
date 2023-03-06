@@ -22,12 +22,11 @@ public class DIYLinkedList {
 
   public void add(int index, int value) { //adding it at a specific index
     if (index == 0) { //only if index is in range
-      this.head = new Node(value, (this.getNode(index)));
+      this.head = new Node(value, head);
     }
     else if (index <= this.size()){
-      Node newNode = new Node (value, this.getNode(index));//inserting the element before the element that is currently at that index, so it will become the new element at that index
-      //making it point to the next index
-      this.getNode(index - 1).next = newNode;//setting the index before pointing to the new one
+    this.getNode(index - 1).next = new Node (value, this.getNode(index));//making a new node that points to the node currently at the index, and pointing the node and index-1 the new node, squishing it in between
+
     }
 
   }
@@ -43,7 +42,7 @@ public class DIYLinkedList {
   }
 
   public int get(int index) {
-    if (index > this.size()) {
+    if (index >= this.size()) {
       return -1;
     }
 
