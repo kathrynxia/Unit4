@@ -23,29 +23,35 @@ public class DIYLinkedList {
   public void add(int index, int value) { //adding it at a specific index
     if (index == 0) { //only if index is in range
       this.head = new Node(value, head);
-    } else if (index <= this.size()) {
-      this.getNode(index - 1).next = new Node(value, this.getNode(index)); //making a new node that points to the node currently at the index, and pointing the node and index-1 the new node, squishing it in between
     }
+    else if (index <= this.size()){
+    this.getNode(index - 1).next = new Node (value, this.getNode(index));//making a new node that points to the node currently at the index, and pointing the node and index-1 the new node, squishing it in between
+    }
+
   }
 
-  public void addSorted(int value) {
+  public void addSorted(int value){
     boolean added = false;
-    if (this.head == null) {
+    if (this.head == null){
       this.head = new Node(value);
-    } else if (value >= this.get(this.size() - 1)) {
-      this.add(value);
-    } else {
-      for (int i = 0; i < this.size() - 1; i++) {
-        if (value <= this.get(0)) {
-          this.add(0, value);
-          break;
-        }
-        if (value >= this.get(i) && (value <= this.get(i + 1))) {
-          this.add(i + 1, value);
-          break;
-        }
-      }
     }
+
+    else if (value >= this.get(this.size()-1)){
+      this.add(value);
+    }
+
+    else{
+    for (int i = 0; i < this.size() - 1; i++){
+      if (value <= this.get(0)){
+        this.add(0, value);
+        break;
+      }
+      if (value >= this.get(i) && (value <= this.get(i + 1))){
+      this.add(i + 1, value);
+      break;
+    }
+    }
+  }
   }
 
   public void remove(int index) { //adding it at a specific index
@@ -59,10 +65,12 @@ public class DIYLinkedList {
   }
 
   public int get(int index) {
+
     return getNode(index).data;
+
   }
 
-  private Node getNode(int index) { //gets me the node at a current index. Love this helper method
+  private Node getNode(int index) {//gets me the node at a current index. Love this helper method
     if (index > this.size()) {
       return null;
     }
@@ -89,7 +97,7 @@ public class DIYLinkedList {
       if (curNode.data == value) {
         return curInd;
       }
-      curInd++;
+      curInd ++;
 
       curNode = curNode.next;
     }
