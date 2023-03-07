@@ -42,22 +42,11 @@ public class DIYLinkedList {
   }
 
   public int get(int index) {
-    if (index >= this.size()) {
-      return -1;
-    }
 
-    int curInd = 0;//not a very  necessary variable, but like...
 
-    Node curNode = this.head;
+    return getNode(index).data;
 
-    while (curInd <= index) {
-      if (curInd > 0) {
-        curNode = curNode.next;
-      }
-      curInd++;
-    }
 
-    return curNode.data;
   }
 
   private Node getNode(int index) {//gets me the node at a current index. Love this helper method
