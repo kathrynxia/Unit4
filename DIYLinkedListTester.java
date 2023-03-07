@@ -63,6 +63,13 @@ public class DIYLinkedListTester{
         System.out.println(kist.indexOf(4));
         System.out.println(kist.indexOf(3));
         System.out.println(kist.indexOf(400)); //should be -1
+
+
+        //addSorted (not tested thoroughly)
+
+        kist.addSorted(100000);
+        System.out.println(kist);
+
         
 
 
