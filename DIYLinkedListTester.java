@@ -68,6 +68,8 @@ public class DIYLinkedListTester{
         //addSorted (not tested thoroughly)
 
         kist.addSorted(100000);
+        kist.add(4, 100);
+        kist.add(5, 101);
         System.out.println(kist);
 
         
