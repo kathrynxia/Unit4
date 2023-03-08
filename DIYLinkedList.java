@@ -30,6 +30,8 @@ public class DIYLinkedList {
 
   }
 
+  
+
   public void addSorted(int value){
     boolean added = false;
     if (this.head == null){
@@ -71,7 +73,7 @@ public class DIYLinkedList {
   }
 
   private Node getNode(int index) {//gets me the node at a current index. Love this helper method
-    if (index > this.size()) {
+    if (index >= this.size()) {
       return null;
     }
     int curInd = 0;
