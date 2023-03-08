@@ -33,7 +33,6 @@ public class DIYLinkedList {
   
 
   public void addSorted(int value){
-    boolean added = false;
     if (this.head == null){
       this.head = new Node(value);
     }
